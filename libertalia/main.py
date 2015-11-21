@@ -62,7 +62,7 @@ class libertalia(TorrentProvider, MovieProvider):
                 return
 
             if result_table:
-                rows = result_table.findAll("tr", {"class" : re.compile("torrent_row(.*)?")})
+                rows = result_table.findAll("tr", {"class" : "torrent_row"})
                 log.debug("Found %d results for search %s" % (len(rows), titleClean))
                 for row in rows:
 
@@ -101,7 +101,7 @@ class libertalia(TorrentProvider, MovieProvider):
                             'leechers' : leechers
                             }
 
-                        log.debug("Found result: %s result %s" % (result_title, result))
+                        log.debug("Found result: %s" % result)
 
                         results.append(result)
 
