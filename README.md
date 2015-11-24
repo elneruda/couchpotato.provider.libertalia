@@ -2,7 +2,7 @@
 
 inspired by Raver2046 SiCKRAGETV Provider (https://github.com/SiCKRAGETV/SickRage/blob/master/sickbeard/providers/libertalia.py)
 
-FNT (French) Torrent Provider integration into CouchPotato
+Libertalia (French) Torrent Provider integration into CouchPotato
 
 ##How-to install
 
@@ -14,7 +14,7 @@ Once installed as above, go about activating the provider as you would with any 
 
 # couchpotato.provider.libertalia
 
-FNT (Francais) Fournisseur de torrent intégré dans couchpotato
+Libertalia (Francais) Fournisseur de torrent intégré dans couchpotato
 
 ##Comment l'installer
 
