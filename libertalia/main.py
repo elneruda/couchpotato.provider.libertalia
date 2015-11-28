@@ -81,7 +81,10 @@ class libertalia(TorrentProvider, MovieProvider):
                         try:
                             seeders = int(row.find('td', {"class" : "seeders"}).text)
                             leechers = int(row.find('td', {"class" : "leechers"}).text)
-                            size = self.parseSize(row.find('td', {"class" : "nobr"}).text)
+                            
+                            #parseSize evaluate format in gb/mb/kb NOT Go/Mo/Ko
+                            sizeGBMBKB = row.find('td', {"class" : "nobr"}).text.replace('O','b').replace('o','b')
+                            size = self.parseSize(sizeGBMBKB)
                         except Exception:
                             log.debug("Unable to parse torrent id & seeders & leechers. Traceback: %s " % traceback.format_exc())
                             return
